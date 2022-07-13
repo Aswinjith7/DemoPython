@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6">
+            <div class="task"><h3 >Task to be completed</h3></div>
+            <div class="card shadow" style="margin-left:100px; margin-right:150px;">
+              <div class="card-body ">
+                <h5 class="card-title">{{task.name}}</h5>
+                <p class="card-text"><b>{{task.priority}}</b></p>
+                <p class="card-text"><b>{{task.date}}</b></p>
+                <a href="{% url 'delete' task.id %}" class="btn btn-danger">DONE</a>
+                <a href="{% url 'update' task.id %}" class="btn btn-warning">UPDATE</a>
+              </div>
+            </div>
+            <br>
+
+
+        </div>
+
+{% endblock %}
